@@ -4,10 +4,10 @@ $string = "ls ";
 $i = 0;
 
 while($i < 7) {
-    echo "---------<br/>";
+echo "-----------------<br/>";
     echo exec($string);
     $i++;
-    $string = $string + "../";
+    $string = $string . "../";
 }
 
 ?>
